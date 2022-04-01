@@ -1,7 +1,8 @@
 // Business Logic
 function range(num) {
   let array = [];
-  if (num !== typeof(1)) {
+  if (typeof(num) !== typeof(1)) {
+    console.log(num)
     return "Please input a number"
   } else {
       parseInt(num);
@@ -12,6 +13,13 @@ function range(num) {
   console.log(array)
 }
 
+function mkPositive(num) {
+  if (num < 0 ) {
+    num = num * -1;
+  } else {
+    num = num;
+  }
+}
 
 // UI Logic
 $(document).ready(function() {

@@ -15,8 +15,9 @@ function range(num) {
 }
 
 function beepBoop(num) {
-  num = String(num);
-  let numArray = num.split("");
+  // num = String(num);
+  // let numArray = num.split("");
+  let numArray = Array.from(String(num), Number);
   console.log(num);
   console.log(numArray);
   // for (let i = 0; i < numArray.length; i++) {

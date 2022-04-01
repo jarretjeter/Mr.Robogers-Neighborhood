@@ -13,3 +13,7 @@ Describe: beebBoop(num)
 Test: "It should return the string 'Beep!' if number is a 1"
 Code: beebBoop(1)
 Expected Output: "Beep!"
+
+Test: "It should return the string 'Boop!' if number is a 2"
+Code: beebBoop(2)
+Expected Output: "Boop!"

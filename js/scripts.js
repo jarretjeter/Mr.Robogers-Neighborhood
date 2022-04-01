@@ -15,13 +15,15 @@ function range(num) {
 }
 
 function beepBoop (num) {
-  let numArray = [num]
-  if (numArray.includes(1)) {
+  let numArray = [num];
+
+  if (numArray.includes(2)) {
+    return "Boop!";
+  } else if (numArray.includes(1)) {
     return "Beep!";
+  } else {
+    return numArray;
   }
-    else {
-      return numArray;
-    }
 }
 
 // function mkPositive(num) {

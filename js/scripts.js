@@ -1,25 +1,37 @@
 // Business Logic
 function range(num) {
   let array = [];
+  // console.log(num);
   if (typeof(num) !== typeof(1)) {
-    console.log(num)
-    return "Please input a number"
+    console.log(num);
+    return "Please input a number";
   } else {
       parseInt(num);
       for (let i = 0; i <= num; i++) {
       array.push(i);
     }
   }
-  console.log(array)
+  console.log(array);
 }
 
-function mkPositive(num) {
-  if (num < 0 ) {
-    num = num * -1;
-  } else {
-    num = num;
+function beepBoop (num) {
+  let numArray = [num]
+  if (numArray.includes(1)) {
+    return "Beep!";
   }
+    else {
+      return numArray;
+    }
 }
+
+// function mkPositive(num) {
+//   if (num < 0 ) {
+//     num = num * -1;
+//   } else {
+//     num = num;
+//   }
+//   console.log(num)
+// }
 
 // UI Logic
 $(document).ready(function() {

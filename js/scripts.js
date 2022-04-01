@@ -14,9 +14,14 @@ function range(num) {
   console.log(array);
 }
 
-function beepBoop (num) {
-  let numArray = [num];
+function beepBoop(num) {
+  num = String(num);
+  let numArray = num.split("");
+  console.log(num);
+  console.log(numArray);
+  // for (let i = 0; i < numArray.length; i++) {
 
+  // }
   if(numArray.includes(3)) {
     return "Won't you be my neighbor?";
   } else if (numArray.includes(2)) {
@@ -24,7 +29,8 @@ function beepBoop (num) {
   } else if (numArray.includes(1)) {
     return "Beep!";
   } else {
-    return numArray.toString("");
+    return parseInt(numArray.join(""));
+    // return numArray.toString("").split("");
   }
 }
 

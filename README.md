@@ -8,6 +8,8 @@ Test: "Will return a range of numbers from 0 up to the user's inputted number in
 Code: range(5);
 Expected Output: [0, 1, 2, 3, 4, 5]
 
+
+
 Describe: beepBoop(num)
 
 Test: "It should return the string 'Beep!' if number is a 1"
@@ -29,3 +31,10 @@ Expected Output: "Won't you be my neighbor?"
 Test: "If number has a combination of values of 1, 2, and/or 3, function should take 3 as highest precedence, then 2, then 1."
 Code: beepBoop(11223);
 Expected Output: "Won't you be my neighbor?"
+
+
+Describe: response(num)
+
+Test: "Uses 'range' and 'beepboop' functions to return a response from Mr. Roboger to the user"
+Code: response();
+Expected Output: 

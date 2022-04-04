@@ -11,30 +11,52 @@ function range(num) {
       array.push(i);
     }
   }
-  console.log(array);
+  return array;
+  // console.log(array);
 }
 
 function beepBoop(num) {
   // num = String(num);
   // let numArray = num.split("");
-  let numArray = Array.from(String(num), Number); //create variable with num converted into an array with number values
+  // let numArray = Array.from(String(num), Number); //create variable with num converted into an array with number values
+  let numArray = range(num);
   let reply = [];
+  console.log(numArray);
+  console.log(reply);
+
   // for (let i = 0; i < numArray.length; i++) {
 
   // }
-  if(numArray.includes(3)) {
-    reply.push("Won't you be my neighbor?"); //push value to empty array
-    return reply.join(""); //convert array to string
-  } else if (numArray.includes(2)) {
-    reply.push("Boop!");
-    return reply.join("");
-  } else if (numArray.includes(1)) {
-    reply.push("Beep!");
-    return reply.join("");
-  } else {
-    return parseInt(numArray.join("")); //if above conditions false, return numArray converted back into a string
-    // return numArray.toString("").split("");
+
+  for (let i = 0; i < numArray.length; i++) {
+    // for (let subIndex = 0; subIndex < i.length)
+    if(numArray[i] === 3) {
+      reply.push("Won't you be my neighbor?"); //push value to empty array
+    } else if (numArray[i] === 2) {
+      reply.push("Boop!");
+    } else if (numArray[i] === 1) {
+      reply.push("Beep!");
+    } else {
+      reply.push(numArray[i]);
+      //if above conditions false, return numArray converted back into a string
+      // return numArray.toString("").split("");
+    }
   }
+  reply.join(" ");
+  return reply;
+  // if(numArray.includes(3)) {
+  //   reply.push("Won't you be my neighbor?"); //push value to empty array
+  //   return reply.join(""); //convert array to string
+  // } else if (numArray.includes(2)) {
+  //   reply.push("Boop!");
+  //   return reply.join("");
+  // } else if (numArray.includes(1)) {
+  //   reply.push("Beep!");
+  //   return reply.join("");
+  // } else {
+  //   return parseInt(numArray.join("")); //if above conditions false, return numArray converted back into a string
+    // return numArray.toString("").split("");
+  // }
 }
 
 // function mkPositive(num) {

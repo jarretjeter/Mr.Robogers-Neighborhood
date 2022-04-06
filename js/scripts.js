@@ -1,4 +1,5 @@
 // Business Logic
+
 function range(num) {
   let array = [];
   if (typeof(num) !== typeof(1)) {
@@ -18,28 +19,20 @@ function beepBoop(num) {
 
   for (let i = 0; i < numArray.length; i++) {
     if(numArray[i].toString().includes(3)) {
-      reply.push("Won't you be my neighbor?"); //push value to empty array
+      reply.push(" Won't you be my neighbor?"); //push value to empty array
     } else if (numArray[i].toString().includes(2)) {
-      reply.push("Boop!");
+      reply.push(" Boop!");
     } else if (numArray[i].toString().includes(1)) {
-      reply.push("Beep!");
+      reply.push(" Beep!");
     } else {
-      reply.push(numArray[i]);
-      //if above conditions false, return numArray converted back into a string
+      reply.push(" " + numArray[i]);
+      //if above condition is false, return numArray converted back into a string
     }
   }
   reply.join(" ");
   return reply;
 }
 
-// function mkPositive(num) {
-//   if (num < 0 ) {
-//     num = num * -1;
-//   } else {
-//     num = num;
-//   }
-//   console.log(num)
-// }
 
 
 // UI Logic
@@ -52,15 +45,7 @@ $(document).ready(function() {
     text.append(beepBoop(userInput));
     let output = document.getElementById("output");
     output.appendChild(text);
-
-
-    // let output = document.getElementById("output");
-    // let response = <p>Hello</p>
-    // // output.removeAttribute("id");
-    // output.insertAdjacentText('beforeend', response);
-    // // $().remove();
   });
-
 });
 
 

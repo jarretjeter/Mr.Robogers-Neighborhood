@@ -29,12 +29,11 @@ function beepBoop(num) {
   // }
 
   for (let i = 0; i < numArray.length; i++) {
-    // for (let subIndex = 0; subIndex < i.length)
-    if(numArray[i] === 3) {
+    if(numArray[i].toString().includes(3)) {
       reply.push("Won't you be my neighbor?"); //push value to empty array
-    } else if (numArray[i] === 2) {
+    } else if (numArray[i].toString().includes(2)) {
       reply.push("Boop!");
-    } else if (numArray[i] === 1) {
+    } else if (numArray[i].toString().includes(1)) {
       reply.push("Beep!");
     } else {
       reply.push(numArray[i]);

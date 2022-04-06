@@ -19,14 +19,13 @@ function beepBoop(num) {
 
   for (let i = 0; i < numArray.length; i++) {
     if(numArray[i].toString().includes(3)) {
-      reply.push(" Won't you be my neighbor?"); //push value to empty array
+      reply.push(" Won't you be my neighbor?");
     } else if (numArray[i].toString().includes(2)) {
       reply.push(" Boop!");
     } else if (numArray[i].toString().includes(1)) {
       reply.push(" Beep!");
     } else {
       reply.push(" " + numArray[i]);
-      //if above condition is false, return numArray converted back into a string
     }
   }
   reply.join(" ");
